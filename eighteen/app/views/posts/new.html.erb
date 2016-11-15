@@ -1,5 +1,14 @@
-<%= simple_form_for @post do |f| %>
+
+ 
+<div class="form-wrapper">
+  <%= simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f| %>
+  <div class="form-group"></div>
   <%= f.input :image %>
+  <div class="form-group text-center"></div>
   <%= f.input :caption %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="form-group text-center"></div>
+  <%= f.button :submit, class: 'btn-success' %>
+  <% end %>
+
+</div>
+

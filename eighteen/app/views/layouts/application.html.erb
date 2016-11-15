@@ -17,15 +17,19 @@
   <div class="navbar-brand">
     <%= link_to "18% Percent", root_path %>
   </div>
-  <div class="collapse navbar-collapse" id="bs-navbar-collapse-1"></div>
-  <ul class="nav navbar-nav navbar-right"></ul>
+  <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">  
   <li></li>
   <%= link_to "New Post", new_post_path %>
   <li></li>
   <%= link_to "Login", '#' %>
   <li></li>
   <%= link_to "Register", '#' %>
+  </ul>
+  </div>
+  </div>
 </nav>
+
 <%= yield %>
 
 </body>
