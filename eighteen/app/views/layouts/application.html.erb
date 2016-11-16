@@ -30,6 +30,12 @@
   </div>
 </nav>
 
+  <% flash.each do |name, msg| %>
+  <div class="container">
+    <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+    <% end %>
+  </div>
+
 <%= yield %>
 
 </body>
