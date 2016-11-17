@@ -1,12 +1,4 @@
-<div class="posts-wrapper row">
-  <div class="post"></div>
-  <div class="post-head"></div>
-  <div class="name"></div>
-  Jonathan
-  <div class="image center-block"></div>
-  <%= image_tag @post.image.url(:medium) %>
-  <p class="caption"></p>
-  <%= @post.caption %>
+<%= render 'post', post: @post %>
   
 
   <div class="text-center edit-links">
@@ -19,4 +11,4 @@
   <% end %>
   </div>
 
-</div>
+
