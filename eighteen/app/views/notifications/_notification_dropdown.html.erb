@@ -3,7 +3,7 @@
     <%= current_user.notifications.count %>
     <span class="glyphicon glyphicon-flag"></span>
   </button>
-  <ul class="dropdown-menu">{ 'aria-labelledby': 'dropdownMenu1' }
+  <ul class="dropdown-menu"> { 'aria-labelledby': 'dropdownMenu1' }
     <li class="dropdown-header text-center">Notifications</li>
     <%= render current_user.notifications.order('created_at DESC').last(5) %>
     <li class="divider" role="separator"></li>

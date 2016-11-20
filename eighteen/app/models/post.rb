@@ -9,4 +9,6 @@ class Post < ActiveRecord::Base
  has_many :comments, dependent: :destroy
  has_many :notifications, dependent: :destroy
  validates :caption, length: { minimum: 3, maximum: 300 }, :allow_blank => true
+ #for followed user view
+ scope :of_followed_users, -> (following_users) { where user_id: following_users }
 end
