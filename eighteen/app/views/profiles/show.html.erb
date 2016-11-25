@@ -31,6 +31,11 @@
       <div class="user-statistics">
         <p>
           <%= pluralize @user.posts.count, 'post' %>
+          <%= @user.followers.count %>
+          <%= "follower".pluralize(@user.followers.count)%>
+          <%= @user.following.count %>
+          <%= "following" %>
+          </li>
         </p>
       </div>
     </div>

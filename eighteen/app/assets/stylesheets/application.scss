@@ -28,15 +28,25 @@ html {
 .navbar-default {
  background-color: #fff;
  height: 54px;
+
  .navbar-nav li a {
  color: #125688;
  }
+}
+
+.nav-user a {
+ color: red !important;
+ font-weight:bold;
 }
 
 .navbar-container {
  width: 70%;
  margin: 0 auto;
 }
+
+
+ 
+
 
 /* ## POST CUSTOMISATIONS ## */
 .posts-wrapper {

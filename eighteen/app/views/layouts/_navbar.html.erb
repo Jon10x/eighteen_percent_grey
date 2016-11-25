@@ -15,6 +15,9 @@
         <li>
           <%= render 'notifications/notification_dropdown' %>
         </li>
+        <li class="nav-user">
+          <%= link_to current_user.user_name, profile_path(current_user.user_name) %>
+        </li>
         <li>
             <%= link_to "Browse Posts", browse_posts_path %>
         </li>
