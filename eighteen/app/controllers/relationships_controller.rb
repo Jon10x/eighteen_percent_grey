@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
     if current_user.follow @user.id
       respond_to do |format|
         format.html { redirect_to root_path }
-        format.js
+        format.js {render :layout=>false}
       end
     end
   end
@@ -14,7 +14,7 @@ class RelationshipsController < ApplicationController
     if current_user.unfollow @user.id
       respond_to do |format|
         format.html { redirect_to root_path }
-        format.js
+        format.js {render :layout=>false} 
       end
     end
   end

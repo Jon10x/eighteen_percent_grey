@@ -22,7 +22,7 @@ before_action :owned_post, only: [:edit, :update, :destroy]
    if @post.liked_by current_user
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js
+      format.js {render :layout=>false}
     end
    end
   end
