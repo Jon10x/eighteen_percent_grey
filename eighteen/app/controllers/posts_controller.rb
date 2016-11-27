@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 before_action :authenticate_user!
-before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
+before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
 before_action :owned_post, only: [:edit, :update, :destroy]
 
  # def index
@@ -8,11 +8,19 @@ before_action :owned_post, only: [:edit, :update, :destroy]
  # end
  
   def index
-   @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]
+   @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]#
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
   
   def browse
    @posts = Post.all.order('created_at DESC').page params[:page]
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
   
   def show
@@ -20,11 +28,21 @@ before_action :owned_post, only: [:edit, :update, :destroy]
   
   def like
    if @post.liked_by current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js {render :layout=>false}
-    end
+    create_notification @post 
+      respond_to do |format|
+        format.js {render :layout=>false}
+        format.html { redirect_to :back }
+      end
    end
+  end
+  
+  def unlike
+    if @post.unliked_by current_user
+      respond_to do |format|
+        format.js {render :layout=>false}
+        format.html { redirect_to :back }
+      end
+    end
   end
   
   def new
@@ -64,6 +82,15 @@ before_action :owned_post, only: [:edit, :update, :destroy]
   end
 
   private
+  
+  def create_notification(post)
+    return if post.user == current_user
+    Notification.create(user_id: post.user.id,
+                        notified_by_id: current_user.id,
+                        post_id: post.id,
+                        identifier: post.id,
+                        notice_type: 'like')
+  end
     
   def post_params
     params.require(:post).permit(:image, :caption)
