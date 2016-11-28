@@ -2,16 +2,16 @@ class PostsController < ApplicationController
 before_action :authenticate_user!
 before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
 before_action :owned_post, only: [:edit, :update, :destroy]
-
- # def index
-#    @posts = Post.all.order('created_at DESC').page params[:page]
- # end
  
   def index
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
    @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]#
-    respond_to do |format|
-      format.js
-      format.html
+      respond_to do |format|
+        format.js
+        format.html
+      end
     end
   end
   
@@ -93,7 +93,7 @@ before_action :owned_post, only: [:edit, :update, :destroy]
   end
     
   def post_params
-    params.require(:post).permit(:image, :caption)
+    params.require(:post).permit(:image, :caption, :all_tags)
   end
   
   def set_post

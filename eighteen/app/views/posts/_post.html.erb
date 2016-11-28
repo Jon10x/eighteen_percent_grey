@@ -2,7 +2,7 @@
   <div class="post">
     <div class="post-head">
       <div class="thumb-img"></div>
-      <div class="user-name">
+      <div class="glyphicon glyphicon-user user-name">
         <%= link_to post.user.user_name, profile_path(post.user.user_name) %>
       </div>
       <div class="time-ago">
@@ -13,13 +13,17 @@
       <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
     </div>
     <div class="post-bottom">
-      <%= render 'posts/likes', post: post %>
+              <div class="tags">
+                <%=raw tag_links(post.all_tags)%>
+              </div>
+      <div class="likes"><%= render 'posts/likes', post: post %><br></div>
       <div class="caption">
         <div class="caption-content">
           <div class="user-name">
-            <%= link_to post.user.user_name, profile_path(post.user.user_name) %>
+            <%= link_to post.user.user_name, profile_path(post.user.user_name) %> 
           </div>
-          <%= post.caption %>
+            <%= post.caption %>
+        </div>
           <div class="comments" id="comments_<%= post.id %>">
             <% if post.comments.any? %>
               <%= render post.comments.first(4), post: post %>
@@ -30,7 +34,6 @@
               <% end %>
             <% end %>
           </div>
-        </div>
       </div>
     </div>
     <div class="comment-like-form row">

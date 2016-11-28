@@ -21,6 +21,8 @@ Rails.application.routes.draw do
    end
   end
   
+  get 'tags/:tag', to: 'posts#index', as: "tag"
+  
   # Existing route
   get ':user_name', to: 'profiles#show', as: :profile
   # New route underneath
