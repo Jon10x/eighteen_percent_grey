@@ -1,0 +1,510 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+ height: 100%;
+ background-color: #fafafa;
+ font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+ height: 100%;
+}
+
+/* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+ margin-bottom: 0px;
+}
+
+.navbar-brand {
+ a {
+ color: #125688;
+ }
+}
+
+.navbar-brand img {
+ height: 100px;
+ margin-top: -40px;
+ position: absolute;
+ z-index: 1000;
+}
+
+.navbar-default {
+ background-color:#0f1626;
+ height: 54px;
+   .navbar-nav li a {
+    color: #f5f5f5;
+ }
+   .navbar-nav li a:hover {
+    color: #ff533D;
+   }
+}
+
+
+.nav-user a {
+
+ font-weight:bold;
+ font-size:1.2em;
+}
+
+.navbar-container {
+ width: 70%;
+ margin: 0 auto;
+}
+
+.navbar-collapse {
+ background-color: #0f1626;
+ color: #f5f5f5;
+ z-index: 100;
+ position: absolute;
+ width:70%;
+}
+ 
+
+
+/* ## POST CUSTOMISATIONS ## */
+.posts-wrapper {
+ padding-top: 40px;
+ margin: 0 auto;
+ max-width: 642px;
+ width: 100%;
+}
+
+.post {
+ background-color: #f5f5f5;
+ border-color: #edeeee;
+ border-style: solid;
+ border-radius: 3px;
+ border-width: 1px;
+ margin-bottom: 60px;
+ .post-head {
+  flex-direction: row;
+  height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  color: #125688;
+  font-size: 15px;
+  line-height: 18px;
+  .user-name, .time-ago {
+  display: inline;
+  }
+  .user-name a {
+  font-weight: bold;
+  font-size: 1.5em;
+  color:#ff533D;
+  text-transform: capitalize;
+  }
+  .time-ago {
+  color: #A5A7AA;
+  float: right;
+  }
+ }
+ .image {
+ border-bottom: 1px solid #eeefef;
+ border-top: 1px solid #eeefef;
+ }
+}
+
+.post-bottom {
+ .user-name, .comment-content {
+  display: inline;
+ }
+
+ .caption {
+ margin-bottom: 7px;
+ }
+
+ .likes {
+  color:black;
+   .user-name {
+    color: #ff533D;
+    text-transform: capitalize;
+   }
+ }
+  
+ .caption-content a {
+  font-size: 1em;
+  color:#ff533D;
+ }
+ .user-name {
+ font-weight: 500;
+ margin-right: 0.3em;
+ color: #0F1626;
+ font-size: 15px;
+     text-transform: capitalize;
+ }
+ .user-name, .caption-content {
+ display: inline;
+ font-size: 1.1em;
+ }
+ 
+ .tags a {
+  color: #AB987A;
+  font-size:1.1em;
+ }
+ 
+ #comment {
+   margin-top: 7px;
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #0F1626;
+
+     a {
+     color:#ff533D;
+     text-transform: capitalize;
+     }
+   
+  }
+     
+  .delete-comment {
+   float: right;
+   color: #515151;
+  }
+ }
+ margin-bottom: 7px;
+ padding-top: 24px;
+ padding-left: 24px;
+ padding-right: 24px;
+ padding-bottom: 10px;
+ font-size: 15px;
+ line-height: 18px;
+}
+
+
+.comment_content {
+ font-size: 15px;
+ line-height: 18px;
+ border: medium none;
+ width: 100%;
+ color: #4B4F54;
+}
+
+.comment-like-form {
+ padding-top: 24px;
+ margin-top: 13px;
+ margin-left: 24px;
+ margin-right: 24px;
+ min-height: 68px;
+ align-items: center;
+ border-top: 1px solid #EEEFEF;
+ flex-direction: row;
+ justify-content: center;
+}
+
+.form-control {
+ font-size:1.5em;
+}
+
+/* ## Wrapper and styling for the new and edit views ## */
+.form-wrapper {
+ width: 60%;
+ margin: 20px auto;
+ background-color: #fff;
+ padding: 40px;
+ border: 1px solid #eeefef;
+ border-radius: 3px;
+}
+
+.edit-links {
+ margin-top: 20px;
+ margin-bottom: 40px;
+}
+
+/* Styling for Log in page/Registration page */ 
+
+.registration-bg {
+ padding-top: 4em;
+ height: 100%;
+ background-image: image-url('IMG-signup.jpg');
+ -moz-background-size: cover;
+ -webkit-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.log-in{
+ margin-left: auto;
+ margin-right: auto;
+ text-align:center;
+ border: none;
+}
+
+.panel {
+ border-radius: 8px;
+}
+
+.panel-heading{
+ h1 {
+ text-align: center;
+ }
+}
+
+.navbar {
+ margin-bottom: 0px;
+}
+.alert {
+ margin-bottom: 0px;
+}
+
+.login-bg {
+ padding-top: 4em;
+ height:100vh;
+ background-image: image-url('login_v3.jpg');
+ -moz-background-size: cover;
+ -webkit-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+/* Preview image styling */
+
+#image-preview {
+ margin: 0px auto;
+}
+#post_image {
+ padding: 1em;
+ margin: 0px auto;
+}
+
+
+/* Pagination */ 
+
+#paginator {
+ color: #4090DB;
+ height: 120px;
+ width: 120px;
+ margin: 60px auto 40px;
+ position: relative;
+ display: table;
+ border: 2px solid #4090DB;
+ border-radius: 50%;
+ :hover {
+  border: 1px solid #2D6DA8;
+  border-radius: 50%;
+ }
+}
+#load_more {
+ display: table-cell;
+ font-size: 12px;
+ padding: 0px 9px;
+ vertical-align: middle;
+ text-decoration: none;
+ a :hover {
+  color: #2D6DA8;
+ }
+}
+
+.comments {
+ .paginator {
+   margin: 0.5em;
+   .more-comments {
+    color: #A5A7AA;
+   }
+  }
+}
+
+#user_avatar {
+ margin: 20px auto;
+}
+
+.comment-submit-button {
+ position: absolute;
+ left: -9999px;
+}
+
+/* Profile CSS */ 
+
+.profile-header {
+ padding: 20px 0;
+ background-color: #f5f5f5 ;
+}
+
+.profile-image {
+ margin: 20px auto;
+ height: 152px;
+ width: 152px;
+}
+
+.user-name-and-follow {
+ display: inline;
+}
+
+.profile-user-name {
+ display: inline;
+ color:#ff533d;
+ text-transform: capitalize;
+}
+
+.edit-button {
+ border-color: green;
+ color: green;
+ background-color: white;
+ margin-left: 20px;
+}
+
+.profile-bio {
+ margin-top: 20px;
+}
+
+#user_bio {
+ border: 1px solid gray;
+}
+
+#user_avatar {
+ padding: 1em;
+ margin: 0px auto;
+}
+
+.user-statistics {
+font-weight: bold;
+display: inline;
+font-size: 1.2em;
+text-align:center;
+}
+
+
+
+
+/* Like Features */ 
+
+.likes {
+ margin-top: 20px;
+ margin-bottom: 7px;
+}
+
+.like {
+ text-decoration: none;
+ color: red;
+}
+
+.like-button a:hover, a:focus {
+ text-decoration: none;
+ color: red;
+}
+
+.liked_post_heart {
+ color: red;
+}
+
+/* Notification CSS */ 
+
+.notification-dropdown {
+ margin-top: 10px;
+  button {
+   border: none;
+  }
+}
+
+.notification_mini {
+ padding-left:2%;
+ color:black;
+}
+
+.notification-index-list {
+ margin-top: 5em;
+ list-style: none;
+  li {
+   margin-top: 1em;
+   background-color: white;
+   padding: 1em;
+  }
+}
+
+.dropdown-menu > li > a {
+ color: black !important;
+}
+/* Follow Button */ 
+
+.follow-button {
+ text-transform: uppercase;
+ border-color: #4090db;
+ color: #4090db;
+ margin-left: 20px;
+  &:visited, &:focus, &:hover {
+   border-color: #2D6396;
+   color: #2D6396;
+   }
+}
+
+.unfollow-button {
+ text-transform: uppercase;
+ border-color: #66bd2b;
+ background-color: #66bd2b;
+ color: white;
+ margin-left: 20px;
+  &:visited, &:focus, &:hover {
+   border-color: #47821F;
+   background-color: #47821F;
+   color: white;
+   }
+}
+
+/* Tagging CSS */
+
+#post_all_tags
+{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+
+.tags-cloud {
+  margin-top: 16px;
+  padding: 14px;
+}
+
+.top-pad {
+  padding: 25px;
+}
+
+.glassy-bg {
+  box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+  background: #0F1626;
+  border-radius: 4px;
+  padding-bottom: 12px;
+   a {
+    color: #AB987A;
+   }
+   h4 {
+    color: #f5f5f5;
+   }
+}
+
+.mt{
+  margin-top: 10px;
+}
+.mb{
+  margin-bottom: 10px;
+}
+
+.pt{
+  padding-top: 10px;
+}
+.pb{
+  padding-bottom: 10px;
+}
+
+/* tag cloud */ 
+
+.css1 { font-size: 1.0em;}
+.css2 { font-size: 1.2em;}
+.css3 { font-size: 1.4em;}
+.css4 { font-size: 1.6em;}

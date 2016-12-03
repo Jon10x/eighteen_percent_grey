@@ -1,0 +1,3 @@
+  <%= form_for(Post.new, remote: true) do |f| %>
+      <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
+  <% end %>
