@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-part-6-notifications/ 
+
 class NotificationsController < ApplicationController
   def link_through
      @notification = Notification.find(params[:id])

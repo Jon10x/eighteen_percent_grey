@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-with-rails-like-me-and-tell-me-im-beautiful/
+
 class PostsController < ApplicationController
 before_action :authenticate_user!
 before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]

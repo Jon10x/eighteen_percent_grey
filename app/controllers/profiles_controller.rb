@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-with-rails-part-4-presenting-pretty-profiles/
+
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user

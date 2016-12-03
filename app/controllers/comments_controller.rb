@@ -1,3 +1,6 @@
+# tutorial used https://www.devwalks.com/lets-build-instagram-with-rails-like-me-and-tell-me-im-beautiful/
+
+
 class CommentsController < ApplicationController
 before_action :set_post
 

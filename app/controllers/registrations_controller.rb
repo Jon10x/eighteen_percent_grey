@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-in-rails-part-1/
+
 class RegistrationsController < Devise::RegistrationsController
   
   private

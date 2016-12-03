@@ -1,3 +1,5 @@
+#https://www.devwalks.com/lets-build-instagram-in-rails-part-1/
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

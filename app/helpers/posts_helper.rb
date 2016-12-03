@@ -1,3 +1,6 @@
+# https://www.sitepoint.com/tagging-scratch-rails/
+# https://www.devwalks.com/lets-build-instagram-with-rails-part-4-presenting-pretty-profiles/
+
 module PostsHelper
   
   def display_likes(post)

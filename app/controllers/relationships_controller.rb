@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-with-ruby-on-rails-part-6-follow-all-the-people/
+
 class RelationshipsController < ApplicationController
   def follow_user
     @user = User.find_by! user_name: params[:user_name]

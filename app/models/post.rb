@@ -1,3 +1,5 @@
+# https://www.devwalks.com/lets-build-instagram-with-rails-like-me-and-tell-me-im-beautiful/
+
 class Post < ActiveRecord::Base
  acts_as_votable
  belongs_to :user
