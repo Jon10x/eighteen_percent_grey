@@ -1,9 +1,10 @@
-<div class="tags-cloud glassy-bg">
+ <!-- <div class="tags-cloud glassy-bg">
   <h4>Browse by Tag</h4>
   <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
-</div>
+ </div>
+ --!>
 
 <%= render 'post_dashboard', posts: @posts %>
 
