@@ -7,7 +7,7 @@ class Tag < ActiveRecord::Base
  # end
  
   def self.counts
-    self.select("tags.id, tags.name,count(taggings.tag_id) as count").joins(:taggings).group("taggings.tag_id, tags.id, tags.name")
+    self.select("tags.id, tags.name,count(taggings.tag_id) as count").Taggings.includes(:tag).select("taggings.tag_id, count(taggings.tag_id) as count").group("taggings.tag_id")
   end 
 
 end
